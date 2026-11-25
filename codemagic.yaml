@@ -20,6 +20,7 @@ workflows:
     scripts:
       - name: Configure Android SDK path
         script: |
+          mkdir -p app/schemas
           echo "sdk.dir=$ANDROID_SDK_ROOT" > local.properties
           if [ -n "${FORGE_MONGO_URI:-}" ]; then
             echo "FORGE_MONGO_URI=$FORGE_MONGO_URI" >> local.properties
