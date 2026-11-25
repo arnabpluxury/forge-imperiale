@@ -15,7 +15,7 @@ import java.time.LocalDate
  *
  * Every exercise ships pre-configured with verified direct-streaming looping media:
  * - CC0 1280x720 H.264 seamless-loop MP4s via jsDelivr CDN (Media3 ExoPlayer) where exact clips exist,
- *   plus verified official YouTube embed IDs with automatic [loopStartSec..loopEndSec] movement looping
+ *   plus verified official YouTube embed IDs with automatic loopStartSec to loopEndSec movement looping
  *   so Arnab never needs to paste URLs or hunt for start timestamps manually.
  * - Exercise cues strictly follow Section 4 without inventing form claims.
  */

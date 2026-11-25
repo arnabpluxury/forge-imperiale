@@ -67,7 +67,7 @@ import com.pierfrancescosoffritti.androidyoutubeplayer.core.player.views.YouTube
 
 /**
  * Smart 16:9 Exercise Guide Video Player (Section 7.3 + Line 18):
- * - Automatically streams & loops ONLY the exact exercise movement segment (`[loopStartSec..loopEndSec]`)
+ * - Automatically streams & loops ONLY the exact exercise movement segment (loopStartSec to loopEndSec)
  *   via Media3 ExoPlayer (`ClippingConfiguration` + `REPEAT_MODE_ONE`) for direct MP4/HLS streams,
  *   OR via official embedded YouTube IFrame API (`android-youtube-player`) with automatic loop seeking.
  * - Supports Play/Pause, Loop toggle, Mute/Unmute, 0.5x / 1x form-study speed, Backup stream switch,

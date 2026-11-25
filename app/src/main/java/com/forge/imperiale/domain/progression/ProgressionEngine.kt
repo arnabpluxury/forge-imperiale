@@ -38,7 +38,7 @@ data class ProgressionRecommendation(
 /**
  * Pure Double-Progression Engine (Section 4 & Section 8.4):
  * - Weeks 1-2: Learn form with light weights.
- * - Weeks 3-4: Add reps within [repMin..repMax].
+ * - Weeks 3-4: Add reps within repMin to repMax.
  * - Weeks 5-6: Add weightStepKg once ALL sets hit repMax at effort GOOD or EASY.
  * - Weeks 7-8: Add +1 extra set to main lifts while continuing double progression.
  * - Safety deload: If 2 consecutive sessions had FAILED sets, reduce weight by weightStepKg.
