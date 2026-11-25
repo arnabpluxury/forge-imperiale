@@ -289,6 +289,7 @@ fun WorkoutScreen(
     }
 
     // ACTIVE WORKOUT SESSION SCREEN (Section 7.3)
+    val activeSession = state.activeSession ?: return
     val currentSlot = state.exerciseSlots[state.currentExerciseIndex]
     val nextSlot = state.exerciseSlots.getOrNull(state.currentExerciseIndex + 1)
     val exSetsDone = state.loggedSets.filter { it.exerciseId == currentSlot.exercise.id && it.skippedReason == null }
@@ -342,7 +343,7 @@ fun WorkoutScreen(
                 ) {
                     Column {
                         Text(
-                            text = state.activeSession.templateName.uppercase(),
+                            text = activeSession.templateName.uppercase(),
                             style = MaterialTheme.typography.titleSmall,
                             color = ForgePalette.Chartreuse
                         )
