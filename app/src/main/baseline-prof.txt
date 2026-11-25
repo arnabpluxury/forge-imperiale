@@ -1,0 +1,9 @@
+HSPLcom/forge/imperiale/ForgeApplication;->onCreate()V
+HSPLcom/forge/imperiale/MainActivity;->onCreate(Landroid/os/Bundle;)V
+HSPLcom/forge/imperiale/scheduler/SchedulerEngine;->generateDayPlan(Lcom/forge/imperiale/scheduler/SchedulerInput;)Lcom/forge/imperiale/scheduler/SchedulerOutput;
+HSPLcom/forge/imperiale/domain/progression/ProgressionEngine;->recommendTarget(Lcom/forge/imperiale/domain/progression/ProgressionInput;)Lcom/forge/imperiale/domain/progression/ProgressionRecommendation;
+HSPLcom/forge/imperiale/coach/RuleBasedCoachEngine;->evaluateBanner(Lcom/forge/imperiale/coach/CoachContext;)Lcom/forge/imperiale/coach/CoachVerdict;
+Landroidx/compose/runtime/**;
+Landroidx/compose/ui/**;
+Landroidx/compose/foundation/lazy/**;
+Lcom/forge/imperiale/ui/**;

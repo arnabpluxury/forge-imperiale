@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Forge</string>
+    <string name="nav_today">Today</string>
+    <string name="nav_workout">Workout</string>
+    <string name="nav_diet">Diet</string>
+    <string name="nav_schedule">Schedule</string>
+    <string name="nav_progress">Progress</string>
+    <string name="nav_settings">Settings</string>
+
+    <!-- Safety & Expectations (Section 6 Non-Negotiable) -->
+    <string name="first_run_parent_doctor_notice">Show this plan to a parent or guardian before starting, and see a doctor immediately if you feel unwell, dizzy, or experience sharp pain during training.</string>
+    <string name="expectations_banner">8 weeks brings visible fitness, posture, and strength changes. Building a muscular physique takes months of consistent training, sleep, and home nutrition — Forge never promises overnight results in a fixed number of days.</string>
+    <string name="stop_card_title">STOP IMMEDIATELY</string>
+    <string name="stop_card_body">End this session right now.\n\n1. Put all weights down safely and sit down.\n2. Drink water slowly and breathe calmly.\n3. Tell a parent or adult in the house right away.\n4. See a doctor if pain, dizziness, breathlessness, or discomfort continues.</string>
+    <string name="stop_card_action">End Session Safely</string>
+    <string name="skipped_meals_warning">You logged 2 or more skipped meals this week. Do not skip meals — eat on time to fuel study and recovery, and talk to a parent or doctor if eating feels difficult.</string>
+    <string name="low_mood_support">Your mood check-in has been low for two weeks in a row. Training can stay light — please talk openly with a parent, family member, or someone you trust.</string>
+    <string name="sunday_rest_locked">Sunday is a locked recovery day. Only light walking and stretching are permitted — no extra strength training.</string>
+
+    <!-- Plate Rule & Diet -->
+    <string name="plate_rule_title">Bengali Home Plate Rule</string>
+    <string name="plate_rule_subtitle">1/2 Sabzi or Salad • 1/4 Protein • 1/4 Rice or Roti (reduce usual rice by ~1/3)</string>
+
+    <!-- Notification Channels -->
+    <string name="channel_workout">Workout Sessions &amp; Rest Timers</string>
+    <string name="channel_meals">Meal Timing &amp; Hydration</string>
+    <string name="channel_sleep">Sleep Protection &amp; Wind-Down</string>
+    <string name="channel_coach">Strict Coach &amp; Schedule Shifts</string>
+</resources>

@@ -1,0 +1,46 @@
+# Codemagic Cloud Android Builds for Forge Imperiale (Native Kotlin + Jetpack Compose)
+# Zero local Android Studio required — builds Debug & R8-minified Release APKs in the cloud.
+
+workflows:
+  forge-android-apk:
+    name: Forge Imperiale Android (Tests + Debug & Release APK)
+    max_build_duration: 60
+    instance_type: mac_mini_m2
+    environment:
+      java: 17
+      vars:
+        PACKAGE_NAME: "com.forge.imperiale"
+    triggering:
+      events:
+        - push
+      branch_patterns:
+        - pattern: main
+          include: true
+          source: true
+    scripts:
+      - name: Configure Android SDK path
+        script: |
+          echo "sdk.dir=$ANDROID_SDK_ROOT" > local.properties
+          if [ -n "${FORGE_MONGO_URI:-}" ]; then
+            echo "FORGE_MONGO_URI=$FORGE_MONGO_URI" >> local.properties
+          fi
+      - name: Run JUnit + Turbine Unit Tests (Scheduler, Progression, Coach & Video Parser)
+        script: |
+          chmod +x gradlew
+          ./gradlew :app:testDebugUnitTest --no-daemon --stacktrace
+      - name: Build Debug & R8-Shrunk Release APKs
+        script: |
+          ./gradlew :app:assembleDebug :app:assembleRelease \
+            --no-daemon --stacktrace \
+            -Dorg.gradle.jvmargs="-Xmx4g -XX:MaxMetaspaceSize=1g"
+    artifacts:
+      - app/build/outputs/apk/debug/*.apk
+      - app/build/outputs/apk/release/*.apk
+      - app/build/reports/tests/testDebugUnitTest/**
+    publishing:
+      email:
+        recipients:
+          - business@synerstudio.net.in
+        notify:
+          success: true
+          failure: true
